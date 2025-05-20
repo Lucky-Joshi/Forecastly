@@ -71,7 +71,7 @@ Forecastly is a sleek and responsive web application that provides **real-time w
 
 ## 🖼️ Screenshots
 
-> You can optionally add screenshots of the app in light and dark mode, weather results, and chart display here.
+> ![Forecastly Screenshot](Screenshot.png)
 
 ---
 

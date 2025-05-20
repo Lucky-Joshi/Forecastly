@@ -78,7 +78,7 @@ Forecastly is a sleek and responsive web application that provides **real-time w
 ## 🧑‍💻 Developer
 
 **Lucky Joshi**
-🔗 [GammaBytes YouTube Channel](https://youtube.com/@TheGammaBytes)
+🔗 [Gamma Bytes YouTube Channel](https://youtube.com/@gammabytesofficial?feature=shared)
 📧 For inquiries/support: *[E-Mail](mailto:luckyjoshi524@gmail.com)*
 
 ---

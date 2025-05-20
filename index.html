@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forecastly</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-indigo-300 text-gray-800 min-h-screen flex flex-col items-center justify-start p-4 transition-colors duration-300" id="body">
+
+  <div class="max-w-md w-full p-4 space-y-4">
+    <!-- Header -->
+    <div class="flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-indigo-700">🌤 Forecastly</h1>
+      <button onclick="toggleTheme()" class="text-xl px-3 py-1 rounded-full bg-indigo-200 hover:bg-indigo-300" id="themeToggle">🌙</button>
+    </div>
+
+    <!-- Search Box -->
+    <div class="flex items-center gap-2">
+      <input id="cityInput" type="text" placeholder="Enter city..." class="flex-1 px-3 py-2 border border-gray-300 rounded-xl focus:outline-none" />
+      <button onclick="getWeather()" class="bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700 transition">Search</button>
+    </div>
+
+    <!-- Options -->
+    <div class="flex gap-2 justify-between text-sm">
+      <button onclick="getLocationWeather()" class="text-blue-700 underline">📍 Use My Location</button>
+      <button onclick="saveFavoriteCity()" class="text-green-700 underline">⭐ Save City</button>
+    </div>
+
+    <!-- Weather Result -->
+    <div id="weatherResult" class="hidden text-center">
+      <h2 class="text-xl font-semibold" id="cityName"></h2>
+      <p id="description" class="capitalize text-gray-600"></p>
+      <img id="weatherIcon" class="mx-auto w-20 h-20 my-4" alt="Weather Icon" />
+      <p class="text-xl font-bold text-indigo-700" id="temperature"></p>
+    </div>
+
+    <!-- Forecast Chart -->
+    <div class="mt-6 hidden" id="forecastContainer">
+      <canvas id="forecastChart"></canvas>
+    </div>
+
+    <!-- Favorite Cities -->
+    <div class="mt-4 text-center">
+      <h3 class="font-semibold text-gray-700">⭐ Favorite Cities</h3>
+      <ul id="favoriteCities" class="text-sm text-indigo-600 space-y-1 mt-2"></ul>
+    </div>
+
+    <!-- Error Message -->
+    <p id="errorMsg" class="text-red-600 hidden text-center">City not found. Try again.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
